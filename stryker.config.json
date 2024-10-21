@@ -1,14 +1,17 @@
 {
-    "testRunner": "mocha",
-    "coverageAnalysis": "perTest",
-    "mochaOptions": {
-      "spec": ["test/app.all.js"],
-      "ui": "bdd",
-      "require": ["@babel/register"],
-      "async-only": false,
-      "grep": ".*"
-    },
-    "mutate": ["lib/**/*.js"],
-    "reporters": ["progress", "clear-text", "html"]
-  }
-  
+  "testRunner": "mocha",
+  "coverageAnalysis": "perTest",
+  "mochaOptions": {
+    "spec": ["test/**/*.js"],
+    "ui": "bdd",
+    "require": ["@babel/register"],
+    "async-only": false,
+    "grep": ".*"
+  },
+  "mutate": ["lib/**/*.js"],
+  "reporters": ["progress", "clear-text", "html"],
+  "ignorePatterns": [
+    "test/res.download.js",
+    "test/res.sendFile.js"
+  ]
+}
